@@ -1,7 +1,8 @@
 import React, {FC, useState} from 'react';
 import "./tailwind.css"
 import ArrowSvg from "./ArrowSvg"
-
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 export interface Property {
     name: string
     type: string
@@ -84,7 +85,8 @@ const Property = ({name, type, description, required, properties, allowedValues,
                     <RequiredLabel required={required}/>
 
                 </div>
-                {description && <div className="mt-1">{description}</div>}
+
+                {description && <div className="mt-1"><ReactMarkdown  rehypePlugins={[rehypeRaw]}  skipHtml={false} children={description}></ReactMarkdown></div>}
                 {allowedValues && <AllowedValues values={allowedValues}/>}
                 {defaultValue && <DefaultValue value={defaultValue}/>}
                 {!!properties && subPropertyVisible && <JsonSchema properties={properties}/>}
