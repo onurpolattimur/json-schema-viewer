@@ -1,3 +1,4 @@
+import React from "react";
 import {JsonSchemaViewer} from "../src"
 
 const schema = {
