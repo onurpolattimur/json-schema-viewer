@@ -1,30 +1,26 @@
 @import url("https://rsms.me/inter/inter.css");
 
 @tailwind base;
-h1 {
-    @apply text-4xl font-bold my-2;
+.json-schema{
+    font-family: 'Inter var', serif;
 }
 
-h2 {
-    @apply text-2xl font-bold my-3;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    border: 0;
 }
-
-h3 {
-    @apply text-lg font-bold my-4;
-}
-
-h4 {
-    @apply text-base font-bold my-5;
-}
-
-h5 {
-    @apply text-sm font-bold my-6;
-}
-
-h6 {
-    @apply text-xs font-bold my-10;
-}
-
 
 @tailwind components;
 @tailwind utilities;
