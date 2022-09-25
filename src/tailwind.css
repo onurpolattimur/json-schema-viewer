@@ -1,0 +1,30 @@
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+h1 {
+    @apply text-4xl font-bold my-2;
+}
+
+h2 {
+    @apply text-2xl font-bold my-3;
+}
+
+h3 {
+    @apply text-lg font-bold my-4;
+}
+
+h4 {
+    @apply text-base font-bold my-5;
+}
+
+h5 {
+    @apply text-sm font-bold my-6;
+}
+
+h6 {
+    @apply text-xs font-bold my-10;
+}
+
+
+@tailwind components;
+@tailwind utilities;
