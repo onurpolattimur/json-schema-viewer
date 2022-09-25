@@ -3,19 +3,25 @@ import "./tailwind.css"
 import ArrowSvg from "./ArrowSvg"
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+
+export type PropertyType = {
+    [k: string]: Property
+}
+
 export interface Property {
     name: string
     type: string
     description: string
     required: boolean
-    properties: Property[]
+    properties: PropertyType
     allowedValues: string[]
     defaultValue: string
 }
 
+
 export interface JsonSchemaViewerProps {
     schema: {
-        properties: Property[]
+        properties: PropertyType
     }
 }
 
@@ -95,7 +101,7 @@ const Property = ({name, type, description, required, properties, allowedValues,
     )
 }
 
-const JsonSchema = ({properties}: { properties: Property[] }) => {
+const JsonSchema = ({properties}: { properties: PropertyType }) => {
     return (
         <div className="border-l border-solid">
             {Object.keys(properties).map((propertyName) => (
