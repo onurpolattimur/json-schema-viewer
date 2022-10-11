@@ -53,6 +53,11 @@ const schema = {
 export default {
     title: 'JsonSchemaViewer',
     component: JsonSchemaViewer,
+    argTypes: {
+        themeOptions: {
+            variant: ['light', 'dark'],
+        },
+    },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -62,5 +67,21 @@ export const Default = Template.bind({});
 // @ts-ignore
 Default.args = {
     schema: schema,
+    themeOptions: {
+        variant: 'light',
+    }
 };
 
+
+export const Dark = Template.bind({});
+// @ts-ignore
+Dark.parameters = {
+    backgrounds: { default: 'dark' },
+};
+// @ts-ignore
+Dark.args = {
+    schema: schema,
+    themeOptions: {
+        variant: 'dark',
+    }
+};

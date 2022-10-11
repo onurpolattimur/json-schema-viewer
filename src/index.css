@@ -1,17 +1,5 @@
 @import url("https://rsms.me/inter/inter.css");
 
-.json-schema-viewer-container {
-    --text-color: #475569FF;
-    --json-schema-border-color: #E5E7EBB2;
-    --required-text-color: #f46d2a;
-    --allowed-value-item-bg-color: #F3F4F6;
-    --property-name-color: #0F172AFF;
-}
-
-.json-schema-viewer-container {
-    font-family: 'Inter var', serif;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,6 +15,30 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     border: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.json-schema-viewer-container {
+    --text-color: #475569FF;
+    --json-schema-border-color: #E5E7EBB2;
+    --required-text-color: #f46d2a;
+    --allowed-value-item-bg-color: #F3F4F6;
+    --property-name-color: #0F172AFF;
+}
+
+.json-schema-viewer-container-dark {
+    --text-color: #dbdbdbb3;
+    --json-schema-border-color: #E5E7EBB2;
+    --required-text-color: #f46d2a;
+    --allowed-value-item-bg-color: #404040;
+    --property-name-color: #e6e6e6FF;
+}
+
+.json-schema-viewer-container {
+    font-family: 'Inter var', serif;
 }
 
 
@@ -50,14 +62,14 @@ time, mark, audio, video {
     flex-direction: column;
 }
 
-.json-schema-viewer-container .property-name{
+.json-schema-viewer-container .property-name {
     margin-right: 0.5rem;
     font-weight: 600;
     color: var(--property-name-color);
 }
 
-.json-schema-viewer-container .property-description{
-   margin-top: 0.25rem;
+.json-schema-viewer-container .property-description {
+    margin-top: 0.25rem;
 }
 
 .json-schema-viewer-container .flex-item-center {
@@ -126,7 +138,7 @@ time, mark, audio, video {
 }
 
 .json-schema-viewer-container .default-value-container {
-    margin-right: 0.25rem;
+    margin-top: 0.25rem;
     display: flex;
     align-items: center;
 }
