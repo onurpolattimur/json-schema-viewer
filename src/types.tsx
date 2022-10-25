@@ -12,12 +12,12 @@ export interface JsonSchemaViewerProps {
     schema: {
         properties: Properties
     }
-    themeOptions: ThemeOptions
+    themeOptions?: ThemeOptions
 }
 
 export interface ThemeOptions {
-    variant: Variant
-    colors: {
+    variant?: Variant
+    colors?: {
         textColor: string,
         jsonSchemaBorderColor: string,
         requiredTextColor: string,
